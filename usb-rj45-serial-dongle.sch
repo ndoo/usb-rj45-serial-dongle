@@ -1938,12 +1938,6 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="17.78" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="11"/>
-<wire x1="35.56" y1="67.31" x2="27.94" y2="67.31" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="67.31" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
-<label x="27.94" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U2" gate="G$1" pin="T1IN"/>
 <wire x1="109.22" y1="55.88" x2="106.68" y2="55.88" width="0.1524" layer="91"/>
 <label x="106.68" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -1954,12 +1948,6 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <pinref part="U1" gate="G$1" pin="RXD"/>
 <wire x1="20.32" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
 <label x="17.78" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="J1" gate="G$1" pin="9"/>
-<wire x1="35.56" y1="82.55" x2="33.02" y2="82.55" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="82.55" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
-<label x="33.02" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="R2OUT"/>
@@ -2151,6 +2139,32 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <pinref part="U2" gate="G$1" pin="V-"/>
 <pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="68.58" x2="140.97" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RXT_LED" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO.3/RXT"/>
+<wire x1="55.88" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
+<label x="58.42" y="22.86" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="9"/>
+<wire x1="35.56" y1="82.55" x2="33.02" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="82.55" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+<label x="33.02" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="TXT_LED" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO.2/TXT"/>
+<wire x1="55.88" y1="20.32" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
+<label x="58.42" y="20.32" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="11"/>
+<wire x1="35.56" y1="67.31" x2="27.94" y2="67.31" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="67.31" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
+<label x="27.94" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
