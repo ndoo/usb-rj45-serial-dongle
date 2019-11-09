@@ -1694,12 +1694,12 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <part name="C1" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-4.7UF-6.3V-20%-X5R(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004285/1" value="4.7uf"/>
 <part name="C2" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-100NF-25V-10%-X7R(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004285/1" value="100nf"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R3" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="1K"/>
+<part name="R1" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="1K"/>
 <part name="C3" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-4.7UF-6.3V-20%-X5R(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004285/1" value="4.7uf"/>
 <part name="C4" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-100NF-25V-10%-X7R(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004285/1" value="100nf"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R6" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-330R-1%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="330R"/>
-<part name="R7" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-330R-1%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="330R"/>
+<part name="R2" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-330R-1%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="330R"/>
+<part name="R3" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-330R-1%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="330R"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="USB" device="PCB_NOPASTE"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IC1" library="maxim" library_urn="urn:adsk.eagle:library:269" deviceset="MAX202ECWE" device="" package3d_urn="urn:adsk.eagle:package:17518/2"/>
@@ -1738,7 +1738,7 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <instance part="GND3" gate="1" x="99.06" y="5.08" smashed="yes">
 <attribute name="VALUE" x="96.52" y="2.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="15.24" y="20.32" smashed="yes">
+<instance part="R1" gate="G$1" x="15.24" y="20.32" smashed="yes">
 <attribute name="NAME" x="11.43" y="21.59" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="11.43" y="17.78" size="1.27" layer="96" ratio="10"/>
 </instance>
@@ -1753,11 +1753,11 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <instance part="GND4" gate="1" x="86.36" y="5.08" smashed="yes">
 <attribute name="VALUE" x="83.82" y="2.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R6" gate="G$1" x="27.94" y="81.28" smashed="yes">
+<instance part="R2" gate="G$1" x="27.94" y="81.28" smashed="yes">
 <attribute name="NAME" x="24.13" y="82.55" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="24.13" y="78.74" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R7" gate="G$1" x="27.94" y="66.04" smashed="yes">
+<instance part="R3" gate="G$1" x="27.94" y="66.04" smashed="yes">
 <attribute name="NAME" x="24.13" y="67.31" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="24.13" y="63.5" size="1.27" layer="96" ratio="10"/>
 </instance>
@@ -1984,15 +1984,15 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="88.9" y="20.32" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="11.43" y1="20.32" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 <label x="10.16" y="20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="24.13" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="66.04" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="81.28" x2="24.13" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="81.28" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
 <junction x="22.86" y="81.28"/>
@@ -2002,7 +2002,7 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <net name="N$2" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="RST"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="20.32" x2="19.05" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -2059,7 +2059,7 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="J1" gate="G$1" pin="12"/>
 <wire x1="31.75" y1="66.04" x2="31.75" y2="64.77" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="64.77" x2="35.56" y2="64.77" width="0.1524" layer="91"/>
@@ -2067,7 +2067,7 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="J1" gate="G$1" pin="10"/>
 <wire x1="31.75" y1="81.28" x2="31.75" y2="80.01" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="80.01" x2="35.56" y2="80.01" width="0.1524" layer="91"/>
