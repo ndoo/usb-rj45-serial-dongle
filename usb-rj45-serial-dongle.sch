@@ -422,6 +422,52 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="SMD-RES-22R-1%-1/16W(0402)" urn="urn:adsk.eagle:component:8005016/1" prefix="R" uservalue="yes" library_version="3">
+<description>301010052</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8004940/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RC0402FR-0722RL" constant="no"/>
+<attribute name="VALUE" value="22R"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-RES-47K-5%-1/16W(0402)" urn="urn:adsk.eagle:component:8005026/1" prefix="R" uservalue="yes" library_version="3">
+<description>301010005</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8004940/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RC0402JR-0747KL" constant="no"/>
+<attribute name="VALUE" value="47K"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="OPL_Capacitor" urn="urn:adsk.eagle:library:8004261">
@@ -1686,6 +1732,8 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="Supply" width="0.2032" drill="0">
+</class>
 </classes>
 <parts>
 <part name="U1" library="CP2102N-A01-GQFN20R" deviceset="CP2102N-A01-GQFN20R" device=""/>
@@ -1710,6 +1758,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U3" library="littlefuse" deviceset="SP0503BAHTG" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R4" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-22R-1%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="22K"/>
+<part name="R5" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-47K-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:8004940/1" value="47K"/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1798,11 +1849,25 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <instance part="GND5" gate="1" x="124.46" y="106.68" smashed="yes" rot="R180">
 <attribute name="VALUE" x="127" y="109.22" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="U2" gate="P" x="124.46" y="38.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="125.222" y="37.338" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="R4" gate="G$1" x="124.46" y="25.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="123.19" y="21.59" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="127" y="21.59" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="R5" gate="G$1" x="124.46" y="12.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="123.19" y="8.89" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="127" y="8.89" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="GND6" gate="1" x="124.46" y="5.08" smashed="yes">
+<attribute name="VALUE" x="121.92" y="2.54" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="50.8" y1="72.39" x2="53.34" y2="72.39" width="0.1524" layer="91"/>
@@ -1856,6 +1921,16 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <wire x1="124.46" y1="101.6" x2="124.46" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U2" gate="P" pin="GND"/>
+<wire x1="132.08" y1="38.1" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
+<label x="134.62" y="38.1" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="8.89" x2="124.46" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="RXD" class="0">
 <segment>
@@ -1866,9 +1941,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="55.88" y="78.74" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="R1IN"/>
-<wire x1="139.7" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
-<label x="142.24" y="50.8" size="1.778" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="R2IN"/>
+<wire x1="139.7" y1="48.26" x2="142.24" y2="48.26" width="0.1524" layer="91"/>
+<label x="142.24" y="48.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="DSR" class="0">
@@ -1889,9 +1964,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="55.88" y="83.82" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="R2IN"/>
-<wire x1="139.7" y1="48.26" x2="142.24" y2="48.26" width="0.1524" layer="91"/>
-<label x="142.24" y="48.26" size="1.778" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="R1IN"/>
+<wire x1="139.7" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
+<label x="142.24" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -1903,9 +1978,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="55.88" y="71.12" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="T1OUT"/>
-<wire x1="139.7" y1="55.88" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
-<label x="142.24" y="55.88" size="1.778" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="T2OUT"/>
+<wire x1="139.7" y1="53.34" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
+<label x="142.24" y="53.34" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -1926,9 +2001,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="55.88" y="66.04" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="T2OUT"/>
-<wire x1="139.7" y1="53.34" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
-<label x="142.24" y="53.34" size="1.778" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="T1OUT"/>
+<wire x1="139.7" y1="55.88" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
+<label x="142.24" y="55.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="UART_TXD" class="0">
@@ -1938,9 +2013,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="17.78" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="T1IN"/>
-<wire x1="109.22" y1="55.88" x2="106.68" y2="55.88" width="0.1524" layer="91"/>
-<label x="106.68" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="T2IN"/>
+<wire x1="109.22" y1="53.34" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
+<label x="106.68" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="UART_RXD" class="0">
@@ -1955,7 +2030,7 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="106.68" y="48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="3V3" class="0">
+<net name="3V3" class="1">
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="55.88" y1="43.18" x2="58.42" y2="43.18" width="0.1524" layer="91"/>
@@ -2020,6 +2095,17 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <wire x1="127" y1="99.06" x2="134.62" y2="99.06" width="0.1524" layer="91"/>
 <label x="134.62" y="99.06" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U2" gate="P" pin="VCC"/>
+<wire x1="116.84" y1="38.1" x2="114.3" y2="38.1" width="0.1524" layer="91"/>
+<label x="114.3" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="29.21" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="30.48" x2="121.92" y2="30.48" width="0.1524" layer="91"/>
+<label x="121.92" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="UART_RTS" class="0">
 <segment>
@@ -2028,9 +2114,9 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="17.78" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="T2IN"/>
-<wire x1="109.22" y1="53.34" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
-<label x="106.68" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="T1IN"/>
+<wire x1="109.22" y1="55.88" x2="106.68" y2="55.88" width="0.1524" layer="91"/>
+<label x="106.68" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="UART_CTS" class="0">
@@ -2148,10 +2234,10 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="58.42" y="22.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="9"/>
-<wire x1="35.56" y1="82.55" x2="33.02" y2="82.55" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="82.55" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
-<label x="33.02" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="11"/>
+<wire x1="35.56" y1="67.31" x2="27.94" y2="67.31" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="67.31" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
+<label x="27.94" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="TXT_LED" class="0">
@@ -2161,10 +2247,26 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 <label x="58.42" y="20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="11"/>
-<wire x1="35.56" y1="67.31" x2="27.94" y2="67.31" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="67.31" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
-<label x="27.94" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="9"/>
+<wire x1="35.56" y1="82.55" x2="33.02" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="82.55" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+<label x="33.02" y="86.36" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="VBUS" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VBUS"/>
+<wire x1="55.88" y1="40.64" x2="58.42" y2="40.64" width="0.1524" layer="91"/>
+<label x="58.42" y="40.64" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="21.59" x2="124.46" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="17.78" x2="124.46" y2="16.51" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="17.78" x2="127" y2="17.78" width="0.1524" layer="91"/>
+<junction x="124.46" y="17.78"/>
+<label x="127" y="17.78" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
