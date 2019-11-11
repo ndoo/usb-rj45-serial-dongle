@@ -2272,6 +2272,12 @@ Source: http://www.maxim-ic.com/cgi-bin/packages?pkg=16%2FSOIC%2E300&amp;Type=Ma
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,55.88,43.18,U1,VDD,3V3,,,"/>
+<approved hash="104,1,55.88,38.1,U1,VREGIN,VCC,,,"/>
+<approved hash="106,1,50.8,80.01,DSR,,,,,"/>
+<approved hash="106,1,50.8,67.31,DTR,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
