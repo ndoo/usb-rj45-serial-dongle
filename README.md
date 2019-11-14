@@ -16,6 +16,8 @@ By presenting a female RJ-45 jack, you now have the freedom to choose any length
 | C2,C4,C5,C6,C7,C8 | CC0402KRX7R8BB104   | 6   |                                                                                                            |
 | R1                | RC0402FR-071KL      | 1   |                                                                                                            |
 | R2,R3             | RC0402FR-07330RL    | 2   |                                                                                                            |
+| R4                | RC0402FR-0722KL     | 1   |                                                                                                            |
+| R5                | RC0402FR-0747KL     | 1   |                                                                                                            |
 | U1                | CP2102N-A01-GQFN20R | 1   | https://www.digikey.sg/product-detail/en/silicon-labs/CP2102N-A01-GQFN20R/336-4826-1-ND/8619802            |
 | U2                | MAX202ECWE+         | 1   | https://www.digikey.sg/product-detail/en/maxim-integrated/MAX202ECWE/MAX202ECWE-ND/947811                  |
 | U3                | SP0503BAHTG         | 1   | https://www.digikey.sg/product-detail/en/littelfuse-inc/SP0503BAHTG/F2715CT-ND/1154322                     |
